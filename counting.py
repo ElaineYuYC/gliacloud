@@ -11,6 +11,5 @@ if __name__ == '__main__':
         listUrls.append(strItem[(intC+1):])
     dicCount = {strE:listUrls.count(strE) for strE in listUrls}
     lSort = sorted(dicCount,key=dicCount.__getitem__)
-    print(lSort[-1] + ' ' + str(dicCount[lSort[-1]]))
-    print(lSort[-2] + ' ' + str(dicCount[lSort[-2]]))
-    print(lSort[-3] + ' ' + str(dicCount[lSort[-3]]))  
+    for i in range(-1,-4,-1):
+        print(lSort[i] + ' ' + str(dicCount[lSort[i]]))

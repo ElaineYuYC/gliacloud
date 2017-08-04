@@ -11,9 +11,17 @@ def factorial(a):
 if __name__ == '__main__':
     n = input("n = ")
     r = input("r = ")
-    n1 = factorial(int(n)-1)
-    r1 = factorial(int(r))
-    r2 = factorial(int(n)-(int)(r))
-    r3 = factorial(int(r)-1)
-    c = (n1 / (r1*r2)) + (n1 / (r3*r2))
+    intN = int(n)
+    intR = int(r)
+    
+    if(intN - intR == 0):
+        c = 1
+    elif(intR == 1):
+        c = intN
+    else:
+        n1 = factorial(intN-1)
+        r1 = factorial(intR)
+        r2 = factorial(intN-intR)
+        r3 = factorial(intR-1)
+        c = (n1 / (r1*r2)) + (n1 / (r3*r2))
     print((str)(c))
